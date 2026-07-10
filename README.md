@@ -133,3 +133,252 @@
 
 </body>
 </html>
+<style>
+    /* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container chính chia 2 cột */
+.cv-container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 297mm; /* Tương đương tỷ lệ trang A4 chuẩn */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* CỘT TRÁI (Sidebar) - Màu tối chủ đạo nền nã chuyên nghiệp */
+.left-column {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    width: 32%;
+    padding: 40px 25px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Khung Avatar (Mặc định icon, có thể đổi thành ảnh) */
+.profile-section .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #334155;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #38bdf8;
+    border: 3px solid #38bdf8;
+}
+
+.profile-section h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.profile-section .tagline {
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-block {
+    margin-bottom: 35px;
+}
+
+.sidebar-block h3 {
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    font-size: 13.5px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+
+.contact-info li i {
+    width: 25px;
+    color: #38bdf8;
+    font-size: 15px;
+}
+
+.contact-info li a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.contact-info li a:hover {
+    color: #38bdf8;
+}
+
+.skills-container h4 {
+    color: #f1f5f9;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.skills-container ul {
+    list-style-position: inside;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+
+.skills-container li {
+    font-size: 13.5px;
+    margin-bottom: 4px;
+}
+
+/* CỘT PHẢI (Nội dung chính) */
+.right-column {
+    width: 68%;
+    padding: 40px 35px;
+    background-color: #fff;
+}
+
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section h2 {
+    color: #1e293b;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.content-section h2 i {
+    margin-right: 10px;
+    color: #0f766e; /* Màu xanh Teal điểm nhấn */
+}
+
+.objective-text {
+    font-size: 14.5px;
+    color: #475569;
+    text-align: justify;
+}
+
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.timeline-item .time {
+    width: 25%;
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #0f766e;
+}
+
+.timeline-item .details {
+    width: 75%;
+}
+
+.timeline-item .details h3 {
+    font-size: 15.5px;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.timeline-item .details .sub-title {
+    font-weight: 600;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.timeline-item .details .note {
+    font-size: 13.5px;
+    color: #475569;
+    font-style: italic;
+}
+
+.timeline-item .details ul {
+    margin-left: 18px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.timeline-item .details li {
+    margin-bottom: 4px;
+}
+
+/* Giải thưởng */
+.award-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.award-item .year {
+    background-color: #f1f5f9;
+    color: #0f766e;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+        padding: 25px;
+    }
+    .timeline-item {
+        flex-direction: column;
+    }
+    .timeline-item .time {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .timeline-item .details {
+        width: 100%;
+    }
+}
+</style>
