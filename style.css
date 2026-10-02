@@ -40,7 +40,7 @@ body {
     margin-bottom: 35px;
 }
 
-/* Khung Avatar (Mặc định icon, có thể đổi thành ảnh) */
+/* Khung Avatar */
 .profile-section .avatar {
     width: 120px;
     height: 120px;
@@ -213,7 +213,7 @@ body {
     margin-bottom: 4px;
 }
 
-/* Giải thưởng */
+/* Giải thưởng - Khối cũ (nếu vẫn muốn giữ layout cũ cho mục khác) */
 .award-item {
     display: flex;
     align-items: flex-start;
@@ -230,6 +230,48 @@ body {
     border-radius: 4px;
     margin-right: 15px;
     font-size: 13px;
+}
+
+/* Styling cho Phương án C - Hoạt động & Thành tích */
+.award-item-c {
+    margin-bottom: 20px;
+}
+
+.award-header-c {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.award-header-c .time-badge {
+    color: #2e7d32; 
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+.award-header-c .divider {
+    margin: 0 10px;
+    color: #999;
+    font-weight: 300;
+}
+
+.award-header-c .award-title {
+    margin: 0;
+    font-size: 1.1em;
+    color: #222;
+    font-weight: 700;
+}
+
+.award-bullets {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+}
+
+.award-bullets li {
+    margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 /* Responsive: Chuyển thành 1 cột trên màn hình điện thoại nhỏ */
